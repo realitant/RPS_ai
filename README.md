@@ -1,6 +1,6 @@
 # RPS_ai
  
-This application is an attempt introduce myself to machine learning by creating an AI to play rock,paper,scissors.
+This application is an attempt to introduce myself to machine learning by creating an AI to play rock,paper,scissors.
 I chose rock, paper, scissors for a few reasons:
 1) It is trivial to code
 2) It is easy to evaluate if the AI works. It is well known that if one randomly selects rock, paper, or scissors with equal likelihood on each move, they will have a 1/3 win rate regardless of any strategy that the opponent employs. Therefore, a winrate of less than 1/3 against a specific strategy indicates room for improvement. 
