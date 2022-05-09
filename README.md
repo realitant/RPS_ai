@@ -11,3 +11,5 @@ At the start of every round, the AI has an equal probability to choose rock, pap
 The more games that are played, the more past habits will affect the shift of probabilities. 
 
 There are two versions of the game in this repository: a console based one found in main.Driver and a GUI based one found in gui.GUI.
+
+It is recommended that users only download the file RPS.jar. The packaged application contains functionality not present in the published source code.
