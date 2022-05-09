@@ -4,6 +4,11 @@
   <artifactId>RPS_ai</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <build>
+  <resources>
+      <resource>
+        <directory>src/resources</directory>
+      </resource>
+    </resources>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
       <plugin>
@@ -16,6 +21,4 @@
       </plugin>
     </plugins>
   </build>
-  <dependencies>
-  </dependencies>
 </project>

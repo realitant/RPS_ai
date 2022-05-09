@@ -5,6 +5,8 @@ import java.awt.Color;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.URL;
+import java.net.URLClassLoader;
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
@@ -19,16 +21,17 @@ import main.RPS;
 public class GUI extends JFrame {
 
 	JFrame frame;
+	
 
-	private final ImageIcon ai_rock = new ImageIcon("C:\\Users\\McKay\\Documents\\STS_Workspaces\\Workspace0\\RPS_ai\\src\\resources\\ai_rock_big.png");
-	private final ImageIcon ai_paper = new ImageIcon("C:\\Users\\McKay\\Documents\\STS_Workspaces\\Workspace0\\RPS_ai\\src\\resources\\ai_paper_big.png");
-	private final ImageIcon ai_scissors = new ImageIcon("C:\\Users\\McKay\\Documents\\STS_Workspaces\\Workspace0\\RPS_ai\\src\\resources\\ai_scissors_big.png");
-	private final ImageIcon rock_small = new ImageIcon("C:\\Users\\McKay\\Documents\\STS_Workspaces\\Workspace0\\RPS_ai\\src\\resources\\rock_small.png");
-	private final ImageIcon paper_small = new ImageIcon("C:\\Users\\McKay\\Documents\\STS_Workspaces\\Workspace0\\RPS_ai\\src\\resources\\paper_small.png");
-	private final ImageIcon scissors_small = new ImageIcon("C:\\Users\\McKay\\Documents\\STS_Workspaces\\Workspace0\\RPS_ai\\src\\resources\\scissors_small.png");
-	private final ImageIcon rock_big = new ImageIcon("C:\\Users\\McKay\\Documents\\STS_Workspaces\\Workspace0\\RPS_ai\\src\\resources\\rock_big.png");
-	private final ImageIcon paper_big = new ImageIcon("C:\\Users\\McKay\\Documents\\STS_Workspaces\\Workspace0\\RPS_ai\\src\\resources\\paper_big.png");
-	private final ImageIcon scissors_big = new ImageIcon("C:\\Users\\McKay\\Documents\\STS_Workspaces\\Workspace0\\RPS_ai\\src\\resources\\scissors_big.png");
+	private final ImageIcon ai_rock = new ImageIcon(GUI.class.getResource("ai_rock_big.png"));
+	private final ImageIcon ai_paper = new ImageIcon(GUI.class.getResource("ai_paper_big.png"));
+	private final ImageIcon ai_scissors = new ImageIcon(GUI.class.getResource("ai_scissors_big.png"));
+	private final ImageIcon rock_small = new ImageIcon(GUI.class.getResource("rock_small.png"));
+	private final ImageIcon paper_small = new ImageIcon(GUI.class.getResource("paper_small.png"));
+	private final ImageIcon scissors_small = new ImageIcon(GUI.class.getResource("scissors_small.png"));
+	private final ImageIcon rock_big = new ImageIcon(GUI.class.getResource("rock_big.png"));
+	private final ImageIcon paper_big = new ImageIcon(GUI.class.getResource("paper_big.png"));
+	private final ImageIcon scissors_big = new ImageIcon(GUI.class.getResource("scissors_big.png"));
 
 
 
@@ -150,6 +153,7 @@ public class GUI extends JFrame {
 	}
 
 	public static void main(String args[]){
+		
 	       GUI gui = new GUI();
 	    }
 }

@@ -6,9 +6,19 @@ public class Driver {
 
 // this driver is legacy and the main method is now run from GUI.java
 
-//	public static void main(String[] args) {
-//		// TODO Auto-generated method stub
-//		RPS driver = new RPS();
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		RPS driver = new RPS();
+		RPS p2 = new RPS();
+		driver.test(p2);
+		driver.test(p2);
+		driver.test(p2);
+		driver.test(p2);
+		driver.test(p2);
+		driver.test(p2);
+		driver.test(p2);
+		driver.test(p2);
+		
 //		Scanner sc = new Scanner(System.in);
 //		String input = "";
 //		System.out.println("Type a string containing only the letters R, P, and S (case insensitive) or type 'quit'");
@@ -18,6 +28,5 @@ public class Driver {
 //			if (input.equals("quit")) break;
 //			driver.play(input);
 //		}
-//	}
-
+	}
 }

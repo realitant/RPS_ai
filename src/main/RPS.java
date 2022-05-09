@@ -233,6 +233,42 @@ public class RPS {
 	public long getDraws() {
 		return draws;
 	}
+	
+	
+	public void test(RPS p2)
+	{
+		char[] p1moves = new char[100];
+		char[] p2moves = new char[100];
+		for (int i=0;i<100;i++)
+		{
+			char p1move=this.getMove();
+			char p2move=p2.getMove();
+			p1moves[i]=p1move;
+			p2moves[i]=p2move;
+			this.recent_moves=this.recent_moves.substring(1,5)+p1move;
+			p2.recent_moves=p2.recent_moves.substring(1, 5)+p2move;
+			int start_index=0;
+			if (this.recent_moves.charAt(0)=='_') start_index = this.recent_moves.lastIndexOf("_")+1;
+			for (int j=start_index;j<5;j++)
+			{
+				this.past_moves.replace(this.recent_moves.substring(j, 5),this.past_moves.get(this.recent_moves.substring(j, 5))+1);
+				p2.past_moves.replace(p2.recent_moves.substring(j, 5),p2.past_moves.get(p2.recent_moves.substring(j, 5))+1);
+				//totals[4-i]++;
+			}
+			this.evaluate(p1move, p2move);
+		}
+		for (int i=0;i<100;i++)
+		{
+			System.out.print(p1moves[i]);
+		}
+		System.out.println();
+		for (int i=0;i<100;i++)
+		{
+			System.out.print(p2moves[i]);
+		}
+		System.out.println();
+		this.displayScore();
+	}
 
 
 }
