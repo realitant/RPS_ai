@@ -1,5 +1,8 @@
 package main;
 
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
@@ -269,6 +272,25 @@ public class RPS {
 		}
 		System.out.println();
 		this.displayScore();
+	}
+	
+	public void submit()
+	{
+		try (Connection conn=ConnectionFactory.getInstance().getConnection())
+		{
+			String query = "INSERT INTO RPS_stats (games_played,player_wins,ai_wins,draws) VALUES"+
+					"("+(player_wins+ai_wins+draws)+","+
+					player_wins+","+
+					ai_wins+","+
+					draws+");";
+			Statement stmt = conn.createStatement();
+			stmt.executeUpdate(query);
+			stmt.close();
+			
+		}catch (SQLException e)
+		{
+			e.printStackTrace();
+		}
 	}
 
 

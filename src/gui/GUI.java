@@ -45,20 +45,16 @@ public class GUI extends JFrame {
 	private JLabel draws = new JLabel("DRAWS: "+game_engine.getDraws());
 	private JLabel losses = new JLabel("AI WINS: "+game_engine.getAi_wins());
 
-	JPanel choices = new JPanel();
+	private JPanel choices = new JPanel();
 
-	JButton pick_rock = new JButton(rock_small);
-    JButton pick_paper = new JButton(paper_small);
-    JButton pick_scissors = new JButton(scissors_small);
+	private JButton pick_rock = new JButton(rock_small);
+	private JButton pick_paper = new JButton(paper_small);
+	private JButton pick_scissors = new JButton(scissors_small);
+    
 
 
 	public GUI()
 	{
-		getContentPane().setBackground(Color.YELLOW);
-		//this doesn't work. not sure why
-		
-		
-
 	    choices.setLayout(new GridLayout(3,0));
 	    choices.setBackground(Color.WHITE);
 
@@ -97,6 +93,7 @@ public class GUI extends JFrame {
 	    		wins.setText("PLAYER WINS: "+game_engine.getPlayer_wins());
 	    		draws.setText("DRAWS: "+game_engine.getDraws());
 	    		losses.setText("AI WINS: "+game_engine.getAi_wins());
+	    		total.setText("TOTAL: "+(game_engine.getAi_wins()+game_engine.getDraws()+game_engine.getPlayer_wins()));
 	    	}
 	    });
 	    pick_paper.addActionListener(new ActionListener() {
@@ -107,6 +104,7 @@ public class GUI extends JFrame {
 	    		wins.setText("PLAYER WINS: "+game_engine.getPlayer_wins());
 	    		draws.setText("DRAWS: "+game_engine.getDraws());
 	    		losses.setText("AI WINS: "+game_engine.getAi_wins());
+	    		total.setText("TOTAL: "+(game_engine.getAi_wins()+game_engine.getDraws()+game_engine.getPlayer_wins()));
 	    	}
 	    });
 	    pick_scissors.addActionListener(new ActionListener() {
@@ -117,10 +115,22 @@ public class GUI extends JFrame {
 	    		wins.setText("PLAYER WINS: "+game_engine.getPlayer_wins());
 	    		draws.setText("DRAWS: "+game_engine.getDraws());
 	    		losses.setText("AI WINS: "+game_engine.getAi_wins());
+	    		total.setText("TOTAL: "+(game_engine.getAi_wins()+game_engine.getDraws()+game_engine.getPlayer_wins()));
 	    	}
 	    });
 
-
+	    JButton submit = new JButton("Upload games (This will close the program)");
+	    submit.addActionListener(new ActionListener() {
+	    	public void actionPerformed(ActionEvent e)
+	    	{
+	    		game_engine.submit();
+	    		System.exit(1);
+	    	}
+	    });
+	    
+	    add(submit,BorderLayout.SOUTH);
+	    
+	    
 
 
 
