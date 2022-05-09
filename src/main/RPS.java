@@ -139,6 +139,7 @@ public class RPS {
 								(10.0*weights[1]+rs)/(total+10.0),
 								(10.0*weights[2]+ps)/(total+10.0)
 								};
+		//if (i==5) System.out.println("["+weights[0]+','+weights[1]+','+weights[2]+']');
 		return weights;
 	}
 

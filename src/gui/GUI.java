@@ -40,6 +40,7 @@ public class GUI extends JFrame {
 	private JLabel ai_choice = new JLabel();
 
 	private JPanel text = new JPanel();
+	private JLabel total = new JLabel("TOTAL: "+(game_engine.getAi_wins()+game_engine.getDraws()+game_engine.getPlayer_wins()));
 	private JLabel wins = new JLabel("PLAYER WINS: "+game_engine.getPlayer_wins());
 	private JLabel draws = new JLabel("DRAWS: "+game_engine.getDraws());
 	private JLabel losses = new JLabel("AI WINS: "+game_engine.getAi_wins());
@@ -53,10 +54,13 @@ public class GUI extends JFrame {
 
 	public GUI()
 	{
-		setBackground(new Color(255,255,255));
+		getContentPane().setBackground(Color.YELLOW);
 		//this doesn't work. not sure why
+		
+		
 
 	    choices.setLayout(new GridLayout(3,0));
+	    choices.setBackground(Color.WHITE);
 
 	    pick_rock.setBackground(new Color(255, 255, 255));
 	    pick_rock.setBorder(BorderFactory.createEmptyBorder());
@@ -73,6 +77,7 @@ public class GUI extends JFrame {
 
 	    JPanel game = new JPanel();
 	    game.setLayout(new GridLayout(0,2));
+	    game.setBackground(Color.WHITE);
 
 	    player_choice.setSize(300,300);
 	    ai_choice.setSize(300, 300);
@@ -120,7 +125,9 @@ public class GUI extends JFrame {
 
 
 	    text.setBorder(BorderFactory.createEmptyBorder(30, 30, 10, 30));
-	    text.setLayout(new GridLayout(0,3));
+	    text.setLayout(new GridLayout(0,4));
+	    text.setBackground(Color.WHITE);
+	    text.add(total);
 	    text.add(wins);
 	    text.add(draws);
 	    text.add(losses);
@@ -135,6 +142,7 @@ public class GUI extends JFrame {
 	    setTitle("RPS");
 	    setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 	    setSize(1000,600);
+	   
 	    setVisible(true);
 	}
 

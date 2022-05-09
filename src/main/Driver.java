@@ -8,25 +8,15 @@ public class Driver {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		RPS driver = new RPS();
-		RPS p2 = new RPS();
-		driver.test(p2);
-		driver.test(p2);
-		driver.test(p2);
-		driver.test(p2);
-		driver.test(p2);
-		driver.test(p2);
-		driver.test(p2);
-		driver.test(p2);
-		
-//		Scanner sc = new Scanner(System.in);
-//		String input = "";
-//		System.out.println("Type a string containing only the letters R, P, and S (case insensitive) or type 'quit'");
-//		while (true)
-//		{
-//			input=sc.nextLine();
-//			if (input.equals("quit")) break;
-//			driver.play(input);
-//		}
+		RPS driver = new RPS();	
+		Scanner sc = new Scanner(System.in);
+		String input = "";
+		System.out.println("Type a string containing only the letters R, P, and S (case insensitive) or type 'quit'");
+		while (true)
+		{
+			input=sc.nextLine();
+			if (input.equals("quit")) break;
+			driver.play(input);
+		}
 	}
 }
