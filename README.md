@@ -10,4 +10,4 @@ The algorithm:
 At the start of every round, the AI has an equal probability to choose rock, paper or scissors. Then the AI looks at past rounds from the session and weights those probabilities based on how often the opponent has played each option. The AI then considers the last move played and further weights the probabilities based on the option picked given that it was preceded by the last move. This process is repeated until the sequence of the last 4 moves is considered. Then a random number is generated and the AI picks its move accordingly.
 The more games that are played, the more past habits will affect the shift of probabilities. 
 
-There are two versions of the game in this repository: a console based one found in main.Driver and a GUI based one found in gui.GUI. At this stage in development, the console based version is recommended as the image files that the GUI uses will not load correctly.
+There are two versions of the game in this repository: a console based one found in main.Driver and a GUI based one found in gui.GUI.
